@@ -10,8 +10,8 @@ Basic logic behind calculator
 
 ### Links
 
-- Solution URL: [Click me!](https://www.frontendmentor.io/solutions/testimonials-grid-section-using-vanilla-htmlcss-n4lfzClflT)
-- Live Site URL: [Click me!](https://lucent-cuchufli-1e7485.netlify.app)
+- Solution URL: [Click me!](https://www.frontendmentor.io/solutions/calculatorapp-htmlcssjs-built-with-vite-COfuAbuQML)
+- Live Site URL: [Click me!](https://unique-daffodil-062161.netlify.app/)
 
 ## Author
 
