@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+/* CUSTOM COLORS */
+
+:root {
+  --num-fs-32: 32px;
+  --ff-700: "League Spartan", sans-serif;
+}
+.theme-1 {
+  /* Backgrounds */
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+
+  /* Keys */
+  --res-del-bg: hsl(225, 21%, 49%);
+  --res-del-shadow: hsl(224, 28%, 35%);
+  --eq-bg: hsl(6, 63%, 50%);
+  --eq-shadow: hsl(6, 70%, 34%);
+  --keys-color: hsl(30, 25%, 89%);
+  --keys-shadow: hsl(28, 16%, 65%);
+
+  /* Text */
+  --primary-color: hsl(221, 14%, 31%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --third-color: hsl(0, 0%, 100%);
+
+  /* Hover state */
+  --eq-hover: hsl(6, 63%, 65%);
+  --res-del-hover: hsl(225, 21%, 64%);
+  --keys-hover: hsl(30, 25%, 95%);
+
+  color: hsl(0, 0%, 100%);
+}
+
+.theme-2 {
+  /* Backgrounds */
+  --main-bg: hsl(0, 0%, 90%);
+  --toggle-keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+
+  /* Keys */
+  --res-del-bg: hsl(185, 42%, 37%);
+  --res-del-shadow: hsl(185, 58%, 25%);
+  --eq-bg: hsl(25, 98%, 40%);
+  --eq-shadow: hsl(25, 99%, 27%);
+  --keys-color: hsl(45, 7%, 89%);
+  --keys-shadow: hsl(35, 11%, 61%);
+
+  /* Text */
+  --primary-color: hsl(60, 10%, 19%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --third-color: hsl(0, 0%, 100%);
+
+  /* Hover state */
+  --eq-hover: hsl(25, 98%, 55%);
+  --res-del-hover: hsl(185, 42%, 50%);
+  --keys-hover: hsl(45, 7%, 95%);
+}
+
+.theme-3 {
+  /* Backgrounds */
+  --main-bg: hsl(268, 75%, 9%);
+  --toggle-keypad-bg: hsl(268, 71%, 12%);
+
+  /* Keys */
+  --res-del-bg: hsl(281, 89%, 26%);
+  --res-del-shadow: hsl(285, 91%, 52%);
+  --eq-bg: hsl(176, 100%, 44%);
+  --eq-shadow: hsl(177, 92%, 70%);
+  --keys-color: hsl(268, 47%, 21%);
+  --keys-shadow: hsl(290, 70%, 36%);
+
+  /* Text */
+  --primary-color: hsl(52, 100%, 62%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --third-color: hsl(198, 20%, 13%);
+
+  /* Hover state */
+  --eq-hover: hsl(176, 100%, 60%);
+  --res-del-hover: hsl(285, 91%, 67%);
+  --keys-hover: hsl(268, 47%, 35%);
+}
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.spc-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--ff-700);
+  font-size: var(--num-fs-32);
+  display: grid;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  place-content: center;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 65px);
+  gap: 15px;
+  background-color: var(--toggle-keypad-bg);
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+button {
+  height: 65px;
+  color: var(--primary-color);
+  background-color: var(--keys-color);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px var(--keys-shadow);
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: var(--keys-hover);
+}
+
+.grid-span-2 {
+  grid-column: span 2;
+}
+
+.theme-switcher > .flex p {
+  font-size: 0.4em;
+}
+
+.themes {
+  justify-content: space-around;
+  margin-bottom: 3px;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 80px;
+  height: 30px;
+  background-color: var(--toggle-keypad-bg);
+  border-radius: 100px;
+}
+
+.radio-buttons input {
+  appearance: none;
+  background-color: var(--eq-bg);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-buttons input:not(:checked) {
+  opacity: 0;
+}
+
+.radio-buttons input:hover {
+  background-color: var(--eq-hover);
+}
+
+.theme-switcher > .flex > p {
+  letter-spacing: 1px;
+  position: relative;
+  right: 30px;
+  top: 27px;
+}
+
+.result-container {
+  height: 90px;
+  font-size: 1.3em;
+  background-color: var(--screen-bg);
+  text-align: right;
+  padding: 30px 24px;
+  margin: 20px 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.diff-color-1 {
+  font-size: 0.7em;
+  color: var(--secondary-color);
+  background-color: var(--res-del-bg);
+  box-shadow: 0px 4px 0px var(--res-del-shadow);
+}
+
+.diff-color-2 {
+  font-size: 0.7em;
+  color: var(--third-color);
+  background-color: var(--eq-bg);
+  box-shadow: 0px 4px 0px var(--eq-shadow);
+}
+
+.diff-color-1:hover {
+  background-color: var(--res-del-hover);
+}
+
+.diff-color-2:hover {
+  background-color: var(--eq-hover);
+}
+
+html:has(.theme-1) {
+  color: red;
+}
+
+.theme-3-screen-bg {
+  background-color: var(--toggle-keypad-bg);
+}
+
+@media (min-width: 750px) {
+  .keys {
+    grid-template-columns: repeat(4, 90px);
+  }
+
+  button {
+    height: 55px;
+  }
+
+  .result-container {
+    font-size: 1.1em;
+  }
+}

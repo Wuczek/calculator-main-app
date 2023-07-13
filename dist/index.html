@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Frontend Mentor | Calculator app</title>
+    <script type="module" crossorigin src="/assets/index-24c293ee.js"></script>
+    <link rel="stylesheet" href="/assets/index-47054d8e.css">
+  </head>
+  <body class="theme-1" onload="loadThemeFromLocalStorage()">
+    <main>
+      <div class="calc-container">
+        <div class="flex spc-between">
+          <h1>calc</h1>
+          <div class="theme-switcher">
+            <div class="flex">
+              <p>THEME</p>
+              <div class="flex-column">
+                <div class="themes flex">
+                  <p>1</p>
+                  <p>2</p>
+                  <p>3</p>
+                </div>
+                <label class="radio-buttons">
+                  <input
+                    type="radio"
+                    name="slider"
+                    id="theme-1"
+                    onclick="changeTheme('theme-1')"
+                  />
+                  <input
+                    type="radio"
+                    name="slider"
+                    id="theme-2"
+                    onclick="changeTheme('theme-2')"
+                  />
+                  <input
+                    type="radio"
+                    name="slider"
+                    id="theme-3"
+                    onclick="changeTheme('theme-3')"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result-container">
+          <p id="result">399,981</p>
+        </div>
+        <div class="keys">
+          <button onclick="showNumbersOnScreen('7')">7</button>
+          <button onclick="showNumbersOnScreen('8')">8</button>
+          <button onclick="showNumbersOnScreen('9')">9</button>
+          <button class="diff-color-1" onclick="deleteNumbers()">DEL</button>
+          <button onclick="showNumbersOnScreen('4')">4</button>
+          <button onclick="showNumbersOnScreen('5')">5</button>
+          <button onclick="showNumbersOnScreen('6')">6</button>
+          <button onclick="setOperators('+')">+</button>
+          <button onclick="showNumbersOnScreen('1')">1</button>
+          <button onclick="showNumbersOnScreen('2')">2</button>
+          <button onclick="showNumbersOnScreen('3')">3</button>
+          <button onclick="setOperators('-')">-</button>
+          <button onclick="showNumbersOnScreen('.')">.</button>
+          <button onclick="showNumbersOnScreen('0')">0</button>
+          <button onclick="setOperators('/')">/</button>
+          <button onclick="setOperators('*')">x</button>
+          <button class="grid-span-2 diff-color-1" onclick="reset()">
+            RESET
+          </button>
+          <button class="grid-span-2 diff-color-2" onclick="getResult()">
+            =
+          </button>
+        </div>
+      </div>
+    </main>
+    
+  </body>
+</html>
