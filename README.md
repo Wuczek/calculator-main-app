@@ -4,9 +4,9 @@ This is a solution to the [Calculator app](https://www.frontendmentor.io/challen
 
 ## Overview
 
-RWD
-Themes saved and loaded from LocalStorage
-Basic logic behind calculator
+- RWD
+- Themes saved and loaded from LocalStorage
+- Basic logic behind calculator
 
 ### Links
 
